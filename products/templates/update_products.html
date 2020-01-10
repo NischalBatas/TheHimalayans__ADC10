@@ -14,13 +14,13 @@
     <div>
         <form action="../save/{{product.id}}" method="POST">
             {%csrf_token%}
-            <label>Product name:</label>
+            
             <input type="text" name="name" value="{{product.product_name}}" placeholder="Enter Product Name" required><br>
-            <label>Price:</label>
+            
             <input type="number" name="price" value="{{product.product_price}}" placeholder="Enter Product Price" required><br>
-            <label>Category:</label>
+            
             <input type="text" name="category" value="{{product.product_category}}" placeholder="Enter Product Category" required><br>
-            <input type="file" name="image"><br>
+            
             <input type="submit" value="Update Product">
         </form>
     </div>
