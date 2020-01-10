@@ -21,7 +21,6 @@ def update_form(request,id):
     return render(request,'update_products.html',context=context)
 
 def add_form(request):
-  
     context={
         "action":"add"
     }
