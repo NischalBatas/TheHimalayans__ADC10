@@ -10,6 +10,10 @@
     <div>
         <h2>Products</h2>
     </div>
+    <form action="" method="GET">
+        <input type="text" name="product_query" placeholder="Search Product">
+        <input type="submit" value="search"> 
+    </form>
     <div>
         {%for product in products%}
             <div>

@@ -5,7 +5,10 @@ from .models import Product
 
 def products_index(request):
     all_products=Product.objects.all()
-    print(all_products)
+    
+    if 'product_query' in request.GET:
+        query=request.GET["product_query"]
+        all_products=Product.objects.filter(product_name=query)
     contex={
         "products":all_products
     }
