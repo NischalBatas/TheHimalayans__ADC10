@@ -1,0 +1,198 @@
+body{
+	margin:0;
+	padding:0;
+	background-color:white;
+	box-sizing: border-box;
+
+}
+
+
+header{
+
+	text-align:center;
+	background-color:#C71800;
+	padding: 20px;
+	font-size: 100%;
+	height: 100%;
+	color: white;
+	font-family: "comic sans ms";
+
+}
+h1{
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	
+  display: inline-block;
+	
+}
+
+/*text style*/
+a{
+  text-decoration: none;
+  color:black;
+}
+/*navigation*/
+nav ul{
+  background-color: #380E00;
+  overflow: hidden;
+  color:white;
+  padding:0;
+  text-align: left;
+  margin: 0;
+  padding-top: 10px;
+  font-family: "comic sans ms";
+  font-size: 20px;
+  
+
+}
+nav ul li{
+  display: inline-block;
+  padding: 20px;
+}
+nav ul li:hover{
+  background-color: #f2f2f2;
+  color:black;
+}
+
+.submit{
+  text-align:center;
+}
+
+.rights {
+ float:right;
+
+}
+
+
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 1200px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+
+
+
+/*Place the social icon in given sequences*/
+	.fa {
+  padding: 1px;
+  float: right;
+  font-size: 30px;
+  padding-top: 5px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+
+/* Add a hover effect if we want */
+.fa:hover {
+  opacity: 0.8;
+}
+
+/* Social media */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+	
+	.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-search{
+  color: white;
+
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa-pinterest {
+  background: #00b489;
+  color: white;
+}
+/*bottom text in the center for copyright*/
+.footer {
+  position: absolute;
+  padding: 70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width:90.8%;
+  background-color:#3c3c3c;
+  color: white;
+  margin-right: 600px;
+  text-align: center;
+font-family: "comic sans ms";
+  
+}
+
+.form{
+  padding: 28px;
+	color: black;
+  width: 600px;
+	box-shadow: 5px 6px 10px 10px #333;
+  margin-left:40px; 
+}
+
+
+
+@media screen and (max-width: 758px ){
+  nav ul{
+    max-height: 0;
+  }
+  
+  nav ul li{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  
+  .footer{
+    height: 25px;
+    max-width: 100%;
+    font-size: 10px;
+  }
+  .fa{
+    font-size: 10px;
+    max-width: 10px;
+  }
+
+  
+
+
+}
+
+@media screen and (max-width: 410px ){
+  
+  .footer{
+    font-size: 5px;
+  }
+}
+
+	

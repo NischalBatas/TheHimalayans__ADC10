@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+   
+</head>
+<body>
+    <header>
+		
+	
+		<a href="Index.html"><h1> Electronic Gadgets</h1></a>
+		
+</header>	
+<nav>
+<ul>
+					
+                    <a href="Products.html"><li>Products</li></a>
+                    <a href="add/"><li>Add</li></a>
+                    <a href="./update/{{product.id}}"><li>Update</li></a>
+                    <a href=""><li>Sign_in</li> </a>
+                    <a href=""><li>New_account</li></a>
+
+			
+		</ul>
+    <h2>Sign Up</h2>
+    <div class="form">   
+    <form action="./save_user" method="POST">
+        <fieldset>
+            <legend>Sign in</legend>
+        {%csrf_token%}
+        <input type="text" name="user_name" placeholder="Enter User Name"><br>
+        <input type="text" name="user_email" placeholder="Enter User Email"><br>
+        <input type="password" name="user_password"  placeholder="Enter Password"><br>
+        <input type="password" name="user_password2" placeholder="Enter Password Again"><br>
+        <input type="submit" value="Sign Up">
+        </fieldset>
+    </form>
+    <div>
+
+       
+        <div class="footer">
+           
+          <p>Copyright &copy ElectronicGadgets2019 Pvt.Ltd</p>
+        </div>
+        
+        
+        </div>
+</body>
+</html>
