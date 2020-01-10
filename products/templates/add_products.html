@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Update Products</title>
+</head>
+<body>
+    <div>
+        <h2>{{action}} Product</h2>
+    </div>
+
+    <div>
+            <form action="../save" method="post" enctype="multipart/form-data">
+                {%csrf_token%}
+                <input type="file" name="product_image">
+                <input type="text" name="name" placeholder="Enter Product Name"><br>
+                <input type="number" name="price" placeholder="Enter Product Price"><br>
+                <input type="text" name="category" placeholder="Enter Product Category"><br>
+                <input type="submit" value="Add Product">
+            </form>
+    </div>
+</body>
+</html>

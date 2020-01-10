@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update Products</title>
+</head>
+<body>
+    <div>
+        <h2>{{action}} Product</h2>
+    </div>
+
+    <div>
+            <form action="../save/{{product.id}}" method="post">
+                {%csrf_token%}
+                <input type="text" name="name" value="{{product.product_name}}" placeholder="Enter Product Name"><br>
+                <input type="number" name="price" value={{product.product_price}} placeholder="Enter Product Price"><br>
+                <input type="text" name="category" value={{product.product_category}} placeholder="Enter Product Category"><br>
+                <input type="submit" value="Update Product">
+            </form>
+    </div>
+</body>
+</html>
