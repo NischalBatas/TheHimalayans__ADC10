@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Products</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+   
+</head>
+<body>
+    <header>
+		
+	
+		<a href="Index.html"><h1> Electronic Gadgets</h1></a>
+		
+</header>	
+<nav>
+<ul>
+					
+                    <a href=""><li>Products</li></a>
+                    <a href="add/"><li>Add</li></a>
+                    <a href="./update/{{product.id}}"><li>Update</li></a>
+                    <a href=""><li>Sign_in</li></a>
+                    <a href=""><li>New_account</li></a>
+
+                    <div class="rights">
+					<form action="" method="GET">
+                        <input type="text" name="product_query" placeholder="Search Product">
+                        <input type="submit" value="search"> 
+                    </form>
+					</div>
+			
+        </ul>
+        </nav>
+    <div>
+        <h2>Products</h2>
+    </div>
+    
+    <div>
+        {%for product in products%}
+            <div>
+               
+                <p>Name:{{product.product_name}}</p>
+                <p>Price:{{product.product_price}}</p>
+                <p>Category:{{product.product_category}}</p>
+                <a href="./update/{{product.id}}">Edit</a>
+                <a href="./delete/{{product.id}}">Delete</a>
+            </div>
+        {%endfor%}
+    </div>
+
+    <div>
+
+
+        
+        <div class="footer">
+            
+          
+            
+          <p>Copyright &copy ElectronicGadgets2019 Pvt.Ltd</p>
+        </div>
+    </div>
+    
+</body>
+</html>

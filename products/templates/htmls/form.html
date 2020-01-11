@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add Update Products</title>
+   
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+		
+	
+		<a href="Index.html"><h1> Electronic Gadgets</h1></a>
+		
+</header>	
+<nav>
+<ul>
+					
+                    <a href="Products.html"><li>Products</li></a>
+                    <a href="add/"><li>Add</li></a>
+                    <a href="./update/{{product.id}}"><li>Update</li></a>
+                    <a href=""><li>Sign_in</li></a>
+                    <a href=""><li>New_account</li></a>
+
+					
+			
+		</ul>
+    <div>
+    <h2>{{action}} Product</h2>
+    </div>
+
+    -<div class="form">
+        <form action="../save/" method="POST">
+            <fieldset>
+                <legend>For adding products</legend>
+            {%csrf_token%}
+            <label>Product name:</label>
+            <input type="text" name="name" placeholder="Enter Product Name" required><br><br>
+            <label>Price:</label>
+            <input type="number" name="price" placeholder="Enter Product Price" required><br><br>
+            <label>Category:</label>
+            <input type="text" name="category" placeholder="Enter Product Category" required><br><br>
+            <div class="submit">
+            <input type="submit" value="Add Product">
+            </div>
+        </fieldset>
+        </form>
+    </div>
+    <div>
+
+       
+        <div class="footer">
+           
+          <p>Copyright &copy ElectronicGadgets2019 Pvt.Ltd</p>
+        </div>
+        
+        
+        </div>
+</body>
+</html>

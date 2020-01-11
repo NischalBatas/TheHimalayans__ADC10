@@ -1,6 +1,7 @@
 from django.shortcuts import render,HttpResponse
 from .models import Product
 
+from django.core.files.storage import FileSystemStorage
 # Create your views here.
 
 def products_index(request):
@@ -16,6 +17,7 @@ def products_index(request):
 
 def update_form(request,id):
     current_obj=Product.objects.get(id=id)
+
     print(current_obj)
     context={
         "action":"update",
@@ -38,6 +40,15 @@ def post_add_product(request):
    
 
     add_product=Product( product_name=name,product_price=price, product_category=category)
+    image=request.FILES["product_image"]
+
+    fs=FileSystemStorage()
+    filename=fs.save(image.name,image)
+    urls=fs.url(filename)
+
+
+    add_product=Product(product_name=name,product_price=price,product_category=category,product_image=urls)
+
     add_product.save()
 
     return HttpResponse("<h2>Product Added</h2>")
@@ -53,6 +64,14 @@ def post_update_product(request,id):
     update_product.product_price=price
     update_product.product_category=category
     
+
+
+    update_product=Product.objects.get(id=id)
+
+    update_product.product_name=name
+    update_product.product_price=price
+    update_product.product_category=category
+
     update_product.save()
 
     return HttpResponse("<h2>Product Updated</h2>")
