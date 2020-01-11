@@ -1,15 +1,10 @@
 from django.shortcuts import render,HttpResponse
 from .models import Product
-
 from django.core.files.storage import FileSystemStorage
 # Create your views here.
 
 def products_index(request):
     all_products=Product.objects.all()
-    
-    if 'product_query' in request.GET:
-        query=request.GET["product_query"]
-        all_products=Product.objects.filter(product_name=query)
     contex={
         "products":all_products
     }
@@ -17,7 +12,6 @@ def products_index(request):
 
 def update_form(request,id):
     current_obj=Product.objects.get(id=id)
-
     print(current_obj)
     context={
         "action":"update",
@@ -35,11 +29,6 @@ def post_add_product(request):
     name=request.POST['name']
     price=request.POST['price']
     category=request.POST['category']
-    
-
-   
-
-    add_product=Product( product_name=name,product_price=price, product_category=category)
     image=request.FILES["product_image"]
 
     fs=FileSystemStorage()
@@ -58,12 +47,6 @@ def post_update_product(request,id):
     name=request.POST['name']
     price=request.POST['price']
     category=request.POST['category']
-   
-    update_product=Product.objects.get(id=id)
-    update_product.product_name=name
-    update_product.product_price=price
-    update_product.product_category=category
-    
 
 
     update_product=Product.objects.get(id=id)

@@ -8,23 +8,6 @@
 </head>
 <body>
     <div>
-    <h2>{{action}} Product</h2>
-    </div>
-    <div>
-        <form action="../save/{{product.id}}" method="POST">
-            {%csrf_token%}
-            
-            <input type="text" name="name" value="{{product.product_name}}" placeholder="Enter Product Name" required><br>
-            
-            <input type="number" name="price" value="{{product.product_price}}" placeholder="Enter Product Price" required><br>
-            
-            <input type="text" name="category" value="{{product.product_category}}" placeholder="Enter Product Category" required><br>
-            
-            <input type="submit" value="Update Product">
-        </form>
-    </div>
-</body>
-</html> 
         <h2>{{action}} Product</h2>
     </div>
 
