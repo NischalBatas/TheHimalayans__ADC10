@@ -1,5 +1,5 @@
 from django.shortcuts import render,HttpResponse
-from products.models import Product
+from .models import Product
 from django.core.files.storage import FileSystemStorage
 # Create your views here.
 

@@ -10,12 +10,8 @@ urlpatterns=[
     path('save',post_add_product),
     path('save/<int:id>',post_update_product),
     path('delete/<int:id>',delete)
-<<<<<<< HEAD
 
 ]
 
 if settings.DEBUG:
     urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
-=======
-]
->>>>>>> NischalBatas_TheHimalayans_CRUDandSearchFeature
